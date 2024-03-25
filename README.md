@@ -1,3 +1,25 @@
+# Шаблон React приложения
+
+Основа для приложения сгенерирована `create-react-app` (без typescript)
+
+## Основные зависимости
+
+- **react v18**
+- react-router-dom v6
+- mobx v6
+- mui v5
+- sass v1
+
+## Страницы приложения
+
+## Компоненты
+
+## Ссылки на туториалы
+
+- [react](https://create-react-app.dev/docs/getting-started)
+- [react-router](https://reactrouter.com/en/main/start/tutorial)
+- [mui](https://mui.com/material-ui/getting-started)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +90,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
