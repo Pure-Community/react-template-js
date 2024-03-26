@@ -7,7 +7,9 @@ import {
 import "./index.scss";
 import Root from "./pages/root";
 import ErrorPage from "./pages/error-page";
-import Login from "./pages/login-page";
+import LoginPage from "./pages/login-page";
+import UserPage from "./pages/user-page";
+
 
 const router = createBrowserRouter([
   {
@@ -17,7 +19,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Login />
+    element: <LoginPage />
+  },
+  {
+    path: "/profile",
+    element: <UserPage />,
   },
 ]);
 

@@ -15,6 +15,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import { redirect, useNavigate } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -57,6 +58,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function PrimarySearchAppBar({ title }) {
+    const navigate = useNavigate();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -97,8 +99,14 @@ export default function PrimarySearchAppBar({ title }) {
             open={isMenuOpen}
             onClose={handleMenuClose}
         >
-            <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-            <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+            <MenuItem onClick={(event) => {
+                handleMenuClose(event)
+                navigate('/profile')
+            }}>Profile</MenuItem>
+            <MenuItem onClick={() => {
+                handleMenuClose()
+                navigate('/profile')
+            }}>My account</MenuItem>
         </Menu>
     );
 
@@ -139,7 +147,11 @@ export default function PrimarySearchAppBar({ title }) {
                 </IconButton>
                 <p>Notifications</p>
             </MenuItem>
-            <MenuItem onClick={handleProfileMenuOpen}>
+            <MenuItem onClick={(event) => {
+                handleProfileMenuOpen(event)
+                navigate('/profile')
+                console.log('profile');
+            }}>
                 <IconButton
                     size="large"
                     aria-label="account of current user"
