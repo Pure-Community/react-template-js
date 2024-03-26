@@ -19,6 +19,7 @@
 - [react](https://create-react-app.dev/docs/getting-started)
 - [react-router](https://reactrouter.com/en/main/start/tutorial)
 - [mui](https://mui.com/material-ui/getting-started)
+- [mobx](https://mobx.js.org/react-integration.html)
 
 # Getting Started with Create React App
 
